@@ -106,17 +106,54 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
             Text("Hello world",
-              textAlign: TextAlign.left,
+              style: TextStyle(
+              color: Colors.purple,
+              fontSize: 24.0,
+              height: 1.2,  
+              fontFamily: "Courier",
+              background: Paint()..color=Colors.yellow,
+              decoration:TextDecoration.underline,
+              decorationStyle: TextDecorationStyle.dashed
+              ),
             ),
 
-            Text("Hello world! I'm Jack. "*4,
+            Text("Hello world! I'm Jia Leiyu. ",
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
+              textScaleFactor: 2,
             ),
 
             Text("Hello world",
-              textScaleFactor: 1.5,
+              textScaleFactor: 2,
             ),
+
+            ElevatedButton.icon(
+              icon: Icon(Icons.send),
+              label: Text("发送"),
+              onPressed: ((){}),
+            ),
+            OutlinedButton.icon(
+              icon: Icon(Icons.add),
+              label: Text("添加"),
+              onPressed: ((){}),
+            ),
+            TextButton.icon(
+              icon: Icon(Icons.info),
+              label: Text("详情"),
+              onPressed: ((){}),
+            ),
+
+            // 模糊进度条(会执行一个动画)
+            LinearProgressIndicator(
+              backgroundColor: Colors.grey[200],
+              valueColor: AlwaysStoppedAnimation(Colors.blue),
+            ),
+            //进度条显示50%
+            LinearProgressIndicator(
+              backgroundColor: Colors.grey[200],
+              valueColor: AlwaysStoppedAnimation(Colors.blue),
+              value: .5,
+            )
           ],
         ),
       ),
@@ -128,3 +165,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
